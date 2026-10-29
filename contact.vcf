@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Dillinger;Charles;;;
+FN:Charles Dillinger
+TITLE:“Maker • Inventor • Designer — Crafting Ideas Into Reality”
+TEL;TYPE=CELL:+14169493340
+EMAIL:chuck@dillinger.ca
+ADR:;;Ajax, Ontario;;;;
+PHOTO:PHOTO;VALUE=URI:https://dillic26.github.io/bcard.github.io/headshot.png
+END:VCARD

@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#071326" name="theme-color"/>
+<title>
+   Chuck Dillinger | Maker · Inventor · App Developer
+  </title>
+<!-- STYLE: Original working CSS preserved unchanged. Edit colors and backgrounds below. -->
+<style>
+
+:root{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",Arial,sans-serif;color:#fff;background:#071326;--amber:#ffcb67;--cyan:#5cceff;--glass:linear-gradient(110deg,rgba(19,44,71,.88),rgba(14,28,52,.84) 60%,rgba(30,42,61,.83))}*{box-sizing:border-box}html,body{margin:0;min-height:100%;width:100%;background:#071326}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit;cursor:pointer}a{color:inherit;text-decoration:none}.app{width:100%;min-height:100vh;min-height:100dvh;position:relative;isolation:isolate}.page{display:none;min-height:100vh;min-height:100dvh;position:relative;flex-direction:column;padding:calc(env(safe-area-inset-top) + 14px) 14px calc(env(safe-area-inset-bottom) + 18px);isolation:isolate}.page.active{display:flex}.page:before{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(2,8,22,.18),rgba(2,10,25,.38) 28%,rgba(3,9,23,.68) 66%,rgba(4,10,24,.52)),url('maker-studio.jpg') center center/cover no-repeat}.page:after{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 40%,transparent 10%,rgba(2,7,20,.22) 100%);pointer-events:none}.page#projects:before{background:linear-gradient(180deg,rgba(3,9,24,.68),rgba(3,10,26,.82)),url('maker-workspace.jpg') center/cover no-repeat}.page#about:before{background:linear-gradient(180deg,rgba(3,9,24,.32),rgba(3,10,26,.72) 50%,rgba(3,10,26,.48)),url('maker-studio.jpg') center/cover no-repeat}.ico{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}.top{height:48px;display:flex;align-items:center;justify-content:center;background:#07142ab0;border-bottom:1px solid #ffffff24;border-radius:12px;margin-bottom:13px;position:relative;flex:none}.top h2{font-size:19px;margin:0}.back{position:absolute;left:4px;border:1px solid #5c9bc66a;border-radius:50%;background:#17385ab5;width:38px;height:38px;display:grid;place-items:center}.more{position:absolute;right:10px;font-size:25px;line-height:1;opacity:.8}.hero{position:relative;min-height:clamp(285px,37dvh,410px);display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding-top:90px;text-align:center}.hero .portrait{width:clamp(120px,34vw,155px);height:clamp(120px,34vw,155px)}.portrait{object-fit:cover;object-position:center 25%;border-radius:50%;border:3px solid #ffedc8;box-shadow:0 0 0 3px #eaa13c,0 0 20px 4px #ffb83c99;background:#111}.hero h1{font-size:clamp(27px,7.1vw,35px);letter-spacing:-1px;margin:15px 0 4px;text-shadow:0 3px 8px #000}.role{color:var(--amber);font-weight:700;font-size:clamp(14px,4vw,17px);margin:0;text-align:center}.strap{font-size:clamp(11px,2.9vw,13px);text-align:center;margin:8px 0 14px;text-shadow:0 2px 7px #000}.quick{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin:0 0 15px}.quick a{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px}.orb{display:grid;place-items:center;width:clamp(52px,15vw,65px);height:clamp(52px,15vw,65px);border-radius:19px;box-shadow:inset 0 2px 9px #ffffff40,0 0 12px #0008;border:1px solid #ffffff55}.orb .ico{width:30px;height:30px}.green{background:linear-gradient(140deg,#03c66a,#00432c);border-color:#18e99c;box-shadow:0 0 13px #02b76566}.blue{background:linear-gradient(140deg,#0b9bff,#052c8b);border-color:#50b9ff;box-shadow:0 0 13px #168dff66}.orange{background:linear-gradient(140deg,#dba148,#4b270f);border-color:#ffd07b}.silver{background:linear-gradient(140deg,#6a829a,#14263c);border-color:#a3b8d0}.nav{display:grid;gap:6px}.navitem,.projectitem{width:100%;min-height:59px;display:flex;align-items:center;gap:12px;text-align:left;border:1px solid #a9b9cf65;border-radius:15px;background:var(--glass);box-shadow:inset 0 1px #ffffff2c,0 5px 14px #0006;padding:5px 10px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}.navicon{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;border:1px solid #a3bfe15c;border-radius:12px;background:linear-gradient(135deg,#4e6888c9,#152339dc);color:#e7f6ff}.navicon .ico{width:29px;height:29px}.navcopy{flex:1;min-width:0}.navcopy strong{display:block;font-size:15px}.navcopy small{display:block;color:#d7e0ef;font-size:12px;margin-top:3px}.chev{font-size:27px;font-weight:200}.footline{margin-top:auto;text-align:center;padding:22px 0 7px;font-size:clamp(15px,4.5vw,19px);font-style:italic;color:#fff0d2;text-shadow:0 2px 6px #000}.biohead{display:flex;flex-direction:column;align-items:center;text-align:center;margin:3px 0 14px}.biohead .portrait{width:130px;height:130px}.biohead h1{font-size:27px;margin:13px 0 4px}.glass{background:var(--glass);border:1px solid #9db4c45e;border-radius:16px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 5px 18px #0005}.aboutcopy{padding:15px;font-size:14px;line-height:1.5}.aboutcopy p{margin:0}.techrow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin:13px 0}.tech{display:flex;flex-direction:column;align-items:center;text-align:center;gap:5px;font-size:11px}.tech .bubble{width:clamp(44px,12vw,55px);height:clamp(44px,12vw,55px);display:grid;place-items:center;border-radius:50%;background:linear-gradient(145deg,#30445f,#07142a);border:1px solid #b5d0ee7a;box-shadow:inset 0 1px 7px #ffffff27}.tech .ico{width:26px;height:26px;color:#cdeaff}.what{padding:12px}.what h3{margin:0 0 11px;font-size:17px;display:flex;gap:8px;align-items:center}.whatgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.whatitem{min-height:111px;border:1px solid #a1b9d15c;border-radius:13px;background:linear-gradient(135deg,#325273c7,#101f39da);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px 3px;gap:7px}.whatitem .ico{width:29px;height:29px}.whatitem strong{font-size:12px}.whatitem small{font-size:10px;color:#e4e8f0}.projects{display:grid;gap:8px}.projectitem{min-height:91px;padding:8px 10px}.projecticon{width:66px;height:66px;flex:0 0 66px;display:grid;place-items:center;border-radius:13px;border:1px solid #b8d7ff75;background:linear-gradient(145deg,#1d82b4,#102447)}.projecticon .ico{width:36px;height:36px}.projecticon.purple{background:linear-gradient(145deg,#6648bc,#1b1559)}.projecticon.gold{background:linear-gradient(145deg,#cb8d38,#513011)}.projecticon.teal{background:linear-gradient(145deg,#20a2b5,#123957)}.projecticon.blue{background:linear-gradient(145deg,#1d82b4,#102447)}.projectitem strong{font-size:17px}.projectitem small{font-size:12px;line-height:1.4}.projectitem em{font-style:normal;font-size:11px;color:var(--amber)}.connect{padding:15px;margin-top:10px}.connect h3{margin:0 0 6px}.connect p{font-size:13px;line-height:1.5;margin:0 0 14px}.aboutbottom{flex:1;min-height:100px}.contactdetail{font-size:12px;color:#d3e7fb;text-align:center;margin-top:8px}@media(min-width:760px){.app{max-width:480px;margin:0 auto;box-shadow:0 0 60px #000}.page:before,.page:after{position:absolute}.page{overflow:hidden}}@media(max-height:740px){.hero{min-height:240px;padding-top:50px}.hero .portrait{width:108px;height:108px}.navitem{min-height:53px}.footline{padding-top:10px}}@media(prefers-reduced-motion:no-preference){.page.active{animation:fade .2s ease}@keyframes fade{from{opacity:.4}to{opacity:1}}}
+
+
+/* =============================================================
+   CUSTOMIZATION — COLORFUL BUTTONS & PORTRAIT SPACING
+   These rules override the original styles without changing the
+   working page structure, navigation, or contact links.
+   Change the portrait width/height and hero gap values here.
+   ============================================================= */
+
+/* Smaller headshot on About Me, with more background visible. */
+#about .biohead .portrait { width: 104px; height: 104px; }
+#about .biohead h1 { margin-top: 21px; }
+
+/* Round, glowing contact buttons, like the approved reference. */
+.orb { border-radius: 50%; transition: transform .18s ease, filter .18s ease; }
+.orb:hover, .orb:focus-visible { transform: translateY(-3px); filter: brightness(1.15); }
+.quick a { font-weight: 600; text-shadow: 0 2px 6px #000; }
+
+/* More colorful glass menu cards, with vibrant icon squares on the left. */
+.navitem { border-color: #94b5d285; background: linear-gradient(110deg,rgba(35,57,83,.88),rgba(17,28,48,.84)); }
+.navitem .navicon { color: #fff; box-shadow: inset 0 1px 8px #ffffff40,0 0 14px #0006; }
+#home .navitem:nth-child(1) .navicon { background:linear-gradient(145deg,#009dff,#1743b9); border-color:#56c7ff; box-shadow:0 0 14px #138fff7c; }
+#home .navitem:nth-child(2) .navicon { background:linear-gradient(145deg,#ffb72f,#c94c10); border-color:#ffd26e; box-shadow:0 0 14px #ff9b2873; }
+#home .navitem:nth-child(3) .navicon { background:linear-gradient(145deg,#b88aff,#6b2fca); border-color:#d5adff; box-shadow:0 0 14px #9c65ff73; }
+.navitem:hover,.projectitem:hover { filter:brightness(1.12); }
+
+/* About Me: playful tech badges and six colorful What I Do tiles. */
+#about .tech:nth-child(1) .bubble { background:linear-gradient(145deg,#566b8e,#152c4b); border-color:#a5c4f2; }
+#about .tech:nth-child(2) .bubble { background:linear-gradient(145deg,#e36b39,#552044); border-color:#ffab7a; }
+#about .tech:nth-child(3) .bubble { background:linear-gradient(145deg,#1fbfe4,#09577b); border-color:#70edff; }
+#about .tech:nth-child(4) .bubble { background:linear-gradient(145deg,#0c91f2,#143eaa); border-color:#84caff; }
+#about .tech:nth-child(5) .bubble { background:linear-gradient(145deg,#e68b2e,#68351e); border-color:#ffcf82; }
+#about .tech .ico { color:#fff; }
+#about .whatitem:nth-child(1) { background:linear-gradient(145deg,#155d98e6,#13284ce6); border-color:#54baff; }
+#about .whatitem:nth-child(2) { background:linear-gradient(145deg,#8154ace6,#29214ce6); border-color:#c09aff; }
+#about .whatitem:nth-child(3) { background:linear-gradient(145deg,#b56b31e6,#3b2630e6); border-color:#f5b96a; }
+#about .whatitem:nth-child(4) { background:linear-gradient(145deg,#008e91e6,#133448e6); border-color:#64e3e1; }
+#about .whatitem:nth-child(5) { background:linear-gradient(145deg,#b7477ce6,#39213fe6); border-color:#ff9ac8; }
+#about .whatitem:nth-child(6) { background:linear-gradient(145deg,#376ebbe6,#1b284de6); border-color:#89b8ff; }
+#about .whatitem .ico { color:#fff; filter:drop-shadow(0 1px 3px #0008); }
+
+/* Projects: distinct bright icons and more vivid card edges. */
+.projectitem { background:linear-gradient(110deg,rgba(31,59,91,.91),rgba(18,29,53,.89)); border-color:#a6c8e084; }
+.projecticon { box-shadow:inset 0 2px 10px #ffffff32,0 0 15px #258cf04a; }
+.projecticon.gold { background:linear-gradient(145deg,#f3b44b,#a44e16); border-color:#ffd488; }
+.projecticon.purple { background:linear-gradient(145deg,#a67aff,#4b29b1); border-color:#d7b9ff; }
+.projecticon.teal { background:linear-gradient(145deg,#1bd6e2,#075b8b); border-color:#89f4f6; }
+.projecticon.blue { background:linear-gradient(145deg,#36aaff,#1645b7); border-color:#94d5ff; }
+.projecticon .ico { color:white; filter:drop-shadow(0 2px 4px #0006); }
+
+
+/* ============================================================
+   HOME LAYOUT — EDIT THESE VALUES TO ADJUST SPACING
+   1. Headshot sits near the top.
+   2. Name, role and tagline sit DIRECTLY BELOW the headshot.
+   3. The large EMPTY GAP is AFTER the tagline, BEFORE buttons.
+   ============================================================ */
+#home .hero {
+  min-height: 0;
+  padding-top: clamp(16px, 3dvh, 28px);
+  justify-content: flex-start;
+  margin-bottom: clamp(65px, 10dvh, 100px); /* EMPTY GAP BELOW TAGLINE */
+}
+#home .hero .portrait {
+  width: clamp(92px, 25vw, 115px);
+  height: clamp(92px, 25vw, 115px);
+}
+#home .hero h1 {
+  margin-top: 13px; /* SMALL GAP: HEADSHOT -> NAME */
+  margin-bottom: 5px;
+}
+#home .hero .role { margin: 0; }
+#home .hero .strap { margin: 8px 0 0; }
+/* On short phones, reduce the empty gap so navigation remains accessible. */
+@media (max-height: 740px) {
+  #home .hero { padding-top: 10px; margin-bottom: 35px; }
+  #home .hero .portrait { width: 88px; height: 88px; }
+}
+
+
+/* ============================================================
+   HOME — LOWER THE CONTACT BUTTONS AND THREE MENU CARDS
+   The headshot, name and tagline remain in their current positions.
+   flex-grow uses the available vertical space as an EMPTY GAP
+   above the Call / Email / Message / Save Contact buttons.
+   Adjust margin-bottom if you want a little more/less space.
+   ============================================================ */
+#home .hero {
+  flex: 1 0 auto;
+  margin-bottom: 16px;
+}
+/* On smaller screens keep a sensible minimum gap. */
+@media (max-height: 740px) {
+  #home .hero { margin-bottom: 12px; }
+}
+
+/* ============================================================
+   FUN ILLUSTRATED ICONS — EDIT THESE COLOURS / SIZES HERE
+   Each project icon uses an independent colourful gradient.
+   Emoji artwork stays separate from the page backgrounds.
+   ============================================================ */
+#projects .projecticon.illustrated-icon {
+  width:66px;height:66px;flex:0 0 66px;border-radius:15px;
+  display:grid;place-items:center;overflow:hidden;
+  border:1.5px solid #ffffff9a;
+  box-shadow:inset 0 2px 5px #ffffff60,inset 0 -6px 15px #0003,0 3px 11px #0007;
+}
+#projects .illustrated-icon.nest {background:radial-gradient(circle at 30% 18%,#b6edff,#23aaf5 55%,#086ab2)}
+#projects .illustrated-icon.genetics {background:radial-gradient(circle at 25% 20%,#e4c4ff,#8d50df 55%,#352079)}
+#projects .illustrated-icon.paint {background:radial-gradient(circle at 25% 20%,#ffefb1,#fd8bcb 55%,#8949df)}
+#projects .illustrated-icon.mac {background:radial-gradient(circle at 25% 20%,#a5f8ff,#188ac4 55%,#16436c)}
+#projects .illustrated-icon.printing {background:radial-gradient(circle at 25% 20%,#ffdb91,#d77a30 55%,#7b3e19)}
+#projects .illustrated-icon.graphic {background:radial-gradient(circle at 25% 20%,#b9e8ff,#5384ec 55%,#36359d)}
+#projects .icon-illustration {font-size:39px;line-height:1;filter:drop-shadow(0 3px 3px #0006);transform:translateY(-1px)}
+#about .tech-illustrated {overflow:hidden;box-shadow:inset 0 2px 5px #ffffff50,0 2px 9px #0008;border:1px solid #c8e3ff85}
+#about .tech-illustrated.ios {background:linear-gradient(145deg,#526779,#071322)}
+#about .tech-illustrated.swift {background:linear-gradient(145deg,#ff985b,#67202c)}
+#about .tech-illustrated.swiftui {background:linear-gradient(145deg,#54e7ff,#07569d)}
+#about .tech-illustrated.xcode {background:linear-gradient(145deg,#56b7ff,#1d377b)}
+#about .tech-illustrated.design {background:linear-gradient(145deg,#f6b35d,#472d4c)}
+#about .tech-glyph {font-size:27px;line-height:1;filter:drop-shadow(0 2px 2px #0007)}
+#about .tech-illustrated.ios .tech-glyph {font-size:34px;color:white;text-shadow:0 0 3px white}
+
+/* ABOUT ME — TECHNOLOGY ICONS (SVG artwork, not emoji).
+   Apple = iOS, Swift bird = Swift and SwiftUI, Benchy = 3D Design.
+   To resize all four icons, change width and height below. */
+#about .tech-logo {width:32px;height:32px;display:block;filter:drop-shadow(0 2px 2px #0007)}
+#about .apple-logo {color:#fff;width:31px;height:31px}
+#about .swift-logo {color:#fff;width:34px;height:34px}
+#about .benchy-logo {color:#fff0c8;width:35px;height:35px}
+</style>
+</head>
+<body>
+<main class="app">
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+<symbol id="phone" viewbox="0 0 24 24">
+<path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.7 19.7 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8L7.1 10a16 16 0 0 0 6.9 6.9l1.5-1.9a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 1.7 1.9z">
+</path>
+</symbol>
+<symbol id="mail" viewbox="0 0 24 24">
+<rect height="16" rx="2" width="20" x="2" y="4">
+</rect>
+<path d="m2 6 10 8 10-8">
+</path>
+</symbol>
+<symbol id="message" viewbox="0 0 24 24">
+<path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5 9 9 0 0 1-4-.9L3 21l1.9-5.5A9 9 0 1 1 21 11.5z">
+</path>
+<path d="M8 11h.01M12 11h.01M16 11h.01">
+</path>
+</symbol>
+<symbol id="person" viewbox="0 0 24 24">
+<circle cx="12" cy="8" r="4">
+</circle>
+<path d="M4 21v-2a8 8 0 0 1 16 0v2">
+</path>
+</symbol>
+<symbol id="gear" viewbox="0 0 24 24">
+<path d="M12 2l1.5 2.4 2.8-.2.9 2.7 2.7.9-.2 2.8L22 12l-2.3 1.4.2 2.8-2.7.9-.9 2.7-2.8-.2L12 22l-1.5-2.4-2.8.2-.9-2.7-2.7-.9.2-2.8L2 12l2.3-1.4-.2-2.8 2.7-.9.9-2.7 2.8.2z">
+</path>
+<circle cx="12" cy="12" r="3">
+</circle>
+</symbol>
+<symbol id="code" viewbox="0 0 24 24">
+<path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-16-2 22">
+</path>
+</symbol>
+<symbol id="box" viewbox="0 0 24 24">
+<path d="m12 2 9 5v10l-9 5-9-5V7zM3 7l9 5 9-5M12 12v10">
+</path>
+</symbol>
+<symbol id="bulb" viewbox="0 0 24 24">
+<path d="M9 18h6m-5 3h4M9 15a7 7 0 1 1 6 0l-1 3h-4z">
+</path>
+</symbol>
+<symbol id="camera" viewbox="0 0 24 24">
+<path d="M3 7h4l2-3h6l2 3h4v13H3z">
+</path>
+<circle cx="12" cy="13" r="4">
+</circle>
+</symbol>
+<symbol id="image" viewbox="0 0 24 24">
+<rect height="18" rx="2" width="20" x="2" y="3">
+</rect>
+<circle cx="8" cy="9" r="2">
+</circle>
+<path d="m3 18 6-6 4 4 3-3 5 5">
+</path>
+</symbol>
+<symbol id="pin" viewbox="0 0 24 24">
+<path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z">
+</path>
+<circle cx="12" cy="10" r="2.5">
+</circle>
+</symbol>
+<symbol id="mobile" viewbox="0 0 24 24">
+<rect height="20" rx="2" width="12" x="6" y="2">
+</rect>
+<path d="M10 18h4">
+</path>
+</symbol>
+<symbol id="tools" viewbox="0 0 24 24">
+<path d="m3 21 8-8M14 3a6 6 0 0 0 7 7l-7 7-7-7zM14 17l4 4">
+</path>
+</symbol>
+<symbol id="laptop" viewbox="0 0 24 24">
+<rect height="13" rx="1" width="16" x="4" y="3">
+</rect>
+<path d="M2 20h20l-2-4H4z">
+</path>
+</symbol>
+<symbol id="chevron" viewbox="0 0 24 24">
+<path d="m9 5 7 7-7 7">
+</path>
+</symbol>
+<symbol id="back" viewbox="0 0 24 24">
+<path d="m15 18-6-6 6-6">
+</path>
+</symbol>
+<symbol id="palette" viewbox="0 0 24 24">
+<path d="M12 3a9 9 0 1 0 0 18c2 0 3-1 3-3 0-1.5-1-2-1-3s1-2 3-2h2c2 0 2-2 2-3a9 9 0 0 0-9-7z">
+</path>
+<path d="M7 10h.01M11 7h.01M16 8h.01M7 15h.01">
+</path>
+</symbol>
+<symbol id="cards" viewbox="0 0 24 24">
+<rect height="18" rx="2" width="15" x="6" y="3">
+</rect>
+<path d="M3 7v13M12 9l2 2 2-2-2-2z">
+</path>
+</symbol>
+</svg>
+<!-- HOME: Portrait, contact buttons, navigation menu -->
+<section class="page active" id="home">
+<div class="hero">
+<img alt="Chuck Dillinger profile photograph" class="portrait" src="headshot.png"/>
+<h1>
+      Chuck Dillinger
+     </h1>
+<p class="role">
+      Maker · Inventor · App Developer
+     </p>
+<!-- HOME TAGLINE: grouped with the name and role -->
+<p class="strap">
+      Turning ideas into useful apps, tools and creative solutions.
+     </p>
+</div>
+<div class="quick">
+<a href="tel:+14169493340">
+<span class="orb green">
+<svg class="ico">
+<use href="#phone">
+</use>
+</svg>
+</span>
+      Call
+     </a>
+<a href="mailto:chuck@dillinger.ca">
+<span class="orb blue">
+<svg class="ico">
+<use href="#mail">
+</use>
+</svg>
+</span>
+      Email
+     </a>
+<a href="sms:+14169493340">
+<span class="orb green">
+<svg class="ico">
+<use href="#message">
+</use>
+</svg>
+</span>
+      Message
+     </a>
+<a download="" href="contact.vcf">
+<span class="orb silver">
+<svg class="ico">
+<use href="#person">
+</use>
+</svg>
+</span>
+      Save Contact
+     </a>
+</div>
+<nav aria-label="Main menu" class="nav">
+<button class="navitem" data-page="about">
+<span class="navicon">
+<svg class="ico">
+<use href="#code">
+</use>
+</svg>
+</span>
+<span class="navcopy">
+<strong>
+        App Development
+       </strong>
+<small>
+        iOS · iPadOS · Swift · SwiftUI
+       </small>
+</span>
+<span class="chev">
+       ›
+      </span>
+</button>
+<button class="navitem" data-focus="what" data-page="about">
+<span class="navicon">
+<svg class="ico">
+<use href="#tools">
+</use>
+</svg>
+</span>
+<span class="navcopy">
+<strong>
+        Creative Solutions
+       </strong>
+<small>
+        Design · Build · Automate
+       </small>
+</span>
+<span class="chev">
+       ›
+      </span>
+</button>
+<button class="navitem" data-page="projects">
+<span class="navicon">
+<svg class="ico">
+<use href="#bulb">
+</use>
+</svg>
+</span>
+<span class="navcopy">
+<strong>
+        Projects
+       </strong>
+<small>
+        Apps, Tools, 3D Prints &amp; More
+       </small>
+</span>
+<span class="chev">
+       ›
+      </span>
+</button>
+</nav>
+<div class="footline">
+     Ideas Today. Better Tools Tomorrow.
+    </div>
+</section>
+<!-- ABOUT ME: Biography, technology icons and What I Do tiles -->
+<section class="page" id="about">
+<header class="top">
+<button aria-label="Back" class="back" data-page="home">
+<svg class="ico">
+<use href="#back">
+</use>
+</svg>
+</button>
+<h2>
+      About Me
+     </h2>
+<span class="more">
+      ···
+     </span>
+</header>
+<div class="biohead">
+<img alt="Chuck Dillinger" class="portrait" src="headshot.png"/>
+<h1>
+      Chuck Dillinger
+     </h1>
+<p class="role">
+      Maker · Inventor · App Developer
+     </p>
+</div>
+<div class="glass aboutcopy">
+<p>
+      I'm a self-taught app developer with a passion for turning ideas into practical, creative and easy-to-use solutions. I enjoy building iOS apps, designing tools, automating workflows and exploring new technology to solve real-world problems.
+     </p>
+</div>
+<div class="techrow">
+<div class="tech">
+<span class="bubble tech-illustrated ios"><svg class="tech-logo apple-logo" viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M43.3 33.9c.1 8.5 7.5 11.4 7.6 11.5-.1.2-1.2 4.2-3.9 8.4-2.4 3.6-4.9 7.2-8.8 7.3-3.8.1-5-2.3-9.4-2.3s-5.7 2.2-9.3 2.4c-3.8.1-6.7-3.9-9.1-7.5C5.4 46.4 1.7 33 6.7 24.2c2.5-4.4 7-7.2 11.9-7.3 3.7-.1 7.2 2.6 9.4 2.6s6.4-3.2 10.8-2.7c1.9.1 7.2.8 10.6 5.8-.3.2-6.3 3.7-6.1 11.3ZM36.2 12.4C38.3 9.8 39.8 6.3 39.4 2.8c-3.1.1-6.8 2.1-9 4.7-2 2.3-3.7 5.9-3.2 9.3 3.4.3 6.9-1.7 9-4.4Z" transform="translate(4 0) scale(.88)"/></svg></span>
+      iOS
+     </div>
+<div class="tech">
+<span class="bubble tech-illustrated swift"><svg class="tech-logo swift-logo" viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M8 11c11 12 20 20 28 26-7-9-15-18-20-27 13 12 24 22 33 29 1-6-1-13-5-20 9 8 14 19 12 29-2 7-8 10-15 9-6-1-12-4-18-4-5 0-10 2-14 4 2-6 6-10 12-13C14 35 10 24 8 11Z"/></svg></span>
+      Swift
+     </div>
+<div class="tech">
+<span class="bubble tech-illustrated swiftui"><svg class="tech-logo swift-logo" viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M8 11c11 12 20 20 28 26-7-9-15-18-20-27 13 12 24 22 33 29 1-6-1-13-5-20 9 8 14 19 12 29-2 7-8 10-15 9-6-1-12-4-18-4-5 0-10 2-14 4 2-6 6-10 12-13C14 35 10 24 8 11Z"/></svg></span>
+      SwiftUI
+     </div>
+<div class="tech">
+<span class="bubble tech-illustrated xcode"><span aria-hidden="true" class="tech-glyph">🛠️</span></span>
+      Xcode
+     </div>
+<div class="tech">
+<span class="bubble tech-illustrated design"><svg class="tech-logo benchy-logo" viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M11 43h43l-7 10H19l-8-10ZM19 39V26h7v-9h17v22h-5V24H31v15H19ZM31 11h4v6h-4z"/><path d="M14 44h37M24 28h5M35 28h5" fill="none" stroke="#5d320e" stroke-width="2.4" stroke-linecap="round"/><path d="M20 55h29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+      3D Design
+     </div>
+</div>
+<div class="glass what" id="what">
+<h3>
+<svg class="ico">
+<use href="#gear">
+</use>
+</svg>
+      What I Do
+     </h3>
+<div class="whatgrid">
+<div class="whatitem">
+<svg class="ico">
+<use href="#mobile">
+</use>
+</svg>
+<strong>
+        App Development
+       </strong>
+<small>
+        iPhone &amp; iPad Apps
+       </small>
+</div>
+<div class="whatitem">
+<svg class="ico">
+<use href="#palette">
+</use>
+</svg>
+<strong>
+        Design &amp; UI/UX
+       </strong>
+<small>
+        Clean &amp; Practical
+       </small>
+</div>
+<div class="whatitem">
+<svg class="ico">
+<use href="#box">
+</use>
+</svg>
+<strong>
+        3D Printing
+       </strong>
+<small>
+        Prototypes &amp; Models
+       </small>
+</div>
+<div class="whatitem">
+<svg class="ico">
+<use href="#bulb">
+</use>
+</svg>
+<strong>
+        Creative Solutions
+       </strong>
+<small>
+        Ideas to Reality
+       </small>
+</div>
+<div class="whatitem">
+<svg class="ico">
+<use href="#palette">
+</use>
+</svg>
+<strong>
+        Graphic Design
+       </strong>
+<small>
+        Graphics &amp; Artwork
+       </small>
+</div>
+<div class="whatitem">
+<svg class="ico">
+<use href="#laptop">
+</use>
+</svg>
+<strong>
+        Tech Support
+       </strong>
+<small>
+        Consulting &amp; Help
+       </small>
+</div>
+</div>
+</div>
+<div class="aboutbottom">
+</div>
+</section>
+<!-- PROJECTS: Edit project names, descriptions and icons here -->
+<section class="page" id="projects">
+<header class="top">
+<button aria-label="Back" class="back" data-page="home">
+<svg class="ico">
+<use href="#back">
+</use>
+</svg>
+</button>
+<h2>
+      Services &amp; Projects
+     </h2>
+<span class="more">
+      ···
+     </span>
+</header>
+<div class="projects">
+<div class="projectitem">
+<span class="projecticon illustrated-icon nest"><span aria-hidden="true" class="icon-illustration">🏠</span></span>
+<span class="navcopy">
+<strong>
+        NestBox
+       </strong>
+<small>
+        Aviary Management App
+       </small>
+<small>
+        Bird records, breeding pairs, clutches and more.
+       </small>
+</span>
+<span class="chev">
+       ›
+      </span>
+</div>
+<div class="projectitem">
+<span class="projecticon illustrated-icon genetics"><span aria-hidden="true" class="icon-illustration">🧬</span></span>
+<span class="navcopy">
+<strong>
+        NestBox Genetics
+       </strong>
+<small>
+        Genetics &amp; Breeding Tools
+        <em>
+         (Coming Soon)
+        </em>
+</small>
+<small>
+        Explore inheritance and breeding possibilities.
+       </small>
+</span>
+<span class="chev">
+       ›
+      </span>
+</div>
+<div class="projectitem">
+<span class="projecticon illustrated-icon paint"><span aria-hidden="true" class="icon-illustration">🎨</span></span>
+<span class="navcopy">
+<strong>
+        FingerPaint
+       </strong>
+<small>
+        Paint Mixing Guide
+        <em>
+         (Coming Soon)
+        </em>
+</small>
+<small>
+        Mix colours, explore palettes and create.
+       </small>
+</span>
+<span class="chev">
+       ›
+      </span>
+</div>
+<div class="projectitem">
+<span class="projecticon illustrated-icon mac"><span aria-hidden="true" class="icon-illustration">🛠️</span></span>
+<span class="navcopy">
+<strong>
+        Mac Desktop Utilities
+       </strong>
+<small>
+        Übersicht Widgets &amp; Mac Tools
+       </small>
+<small>
+        Desktop monitoring, automation and custom utilities.
+       </small>
+</span>
+<span class="chev">
+       ›
+      </span>
+</div>
+<div class="projectitem">
+<span class="projecticon illustrated-icon printing"><span aria-hidden="true" class="icon-illustration">🖨️</span></span>
+<span class="navcopy">
+<strong>
+        3D Design &amp; Printing
+       </strong>
+<small>
+        Prototypes &amp; Models
+       </small>
+<small>
+        Design, print and bring ideas to life.
+       </small>
+</span>
+<span class="chev">
+       ›
+      </span>
+</div>
+<div class="projectitem">
+<span class="projecticon illustrated-icon graphic"><span aria-hidden="true" class="icon-illustration">🖌️</span></span>
+<span class="navcopy">
+<strong>
+        Graphic Design
+       </strong>
+<small>
+        Graphics &amp; Digital Artwork
+       </small>
+<small>
+        Visual designs, layouts and creative projects.
+       </small>
+</span>
+<span class="chev">
+       ›
+      </span>
+</div>
+</div>
+<div class="glass connect">
+<h3>
+      Let's Connect
+     </h3>
+<p>
+      Feel free to reach out for app development, collaboration, ideas or just to say hello!
+     </p>
+<div class="quick">
+<a href="tel:+14169493340">
+<span class="orb green">
+<svg class="ico">
+<use href="#phone">
+</use>
+</svg>
+</span>
+       Call
+      </a>
+<a href="mailto:chuck@dillinger.ca">
+<span class="orb blue">
+<svg class="ico">
+<use href="#mail">
+</use>
+</svg>
+</span>
+       Email
+      </a>
+<a href="sms:+14169493340">
+<span class="orb green">
+<svg class="ico">
+<use href="#message">
+</use>
+</svg>
+</span>
+       Message
+      </a>
+<a download="" href="contact.vcf">
+<span class="orb silver">
+<svg class="ico">
+<use href="#person">
+</use>
+</svg>
+</span>
+       Save Contact
+      </a>
+</div>
+<div class="contactdetail">
+      Ajax, Ontario ·
+      <a href="https://www.facebook.com/carlos.chuck.delikado" rel="noopener" target="_blank">
+       Facebook
+      </a>
+      ·
+      <a href="https://m.me/carlos.chuck.delikado" rel="noopener" target="_blank">
+       Messenger
+      </a>
+</div>
+</div>
+</section>
+</main>
+<script>
+   (()=>{const pages=[...document.querySelectorAll('.page')];function show(id,focus){if(!document.getElementById(id))id='home';pages.forEach(p=>p.classList.toggle('active',p.id===id));history.replaceState(null,'','#'+id);window.scrollTo({top:0,behavior:'instant'});if(focus)setTimeout(()=>document.getElementById(focus)?.scrollIntoView({block:'center',behavior:'smooth'}),80)}document.querySelectorAll('[data-page]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();show(el.dataset.page,el.dataset.focus)}));const id=location.hash.slice(1);if(['home','about','projects'].includes(id))show(id);window.addEventListener('hashchange',()=>{const id=location.hash.slice(1);if(['home','about','projects'].includes(id))show(id)})})();
+  </script>
+</body>
+</html>
